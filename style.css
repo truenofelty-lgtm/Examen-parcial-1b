@@ -1,0 +1,245 @@
+:root {
+    /* Paleta de colores de mi página */
+    --blanco: #FFFFFF;
+    --rojo: #c8102e;
+    --rojoFuerte: #7a0c1c;
+    --negro: #1a1010;
+    --gris: #d9d3d3;
+    --rojoClaro: #e2685c;
+    --grisOscuro: #38373790;
+
+    /* Fuente principal */
+    --fuentePrincipal: "Work Sans", sans-serif;
+
+    /* Tamaño de la fuente */
+    --tamañoFuente: 3.3rem;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* Los siguientes estilos se agregaran a todo el body de mi documento */
+body {
+    font-size: 16px;
+    font-family: var(--fuentePrincipal);
+    font-weight: 400;
+    /* gradiente fondo */
+    background-image: linear-gradient(to top, var(--rojoClaro) 0%, var(--gris) 100%);
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+.sombra {
+    -webkit-box-shadow: 10px 17px 11px -4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 17px 11px -4px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 17px 11px -4px rgba(10, 4, 4, 0.75);
+    border-radius: 2rem;
+    background-image: linear-gradient(to top, var(--gris) 0%, var(--blanco) 70%);
+    padding: 2rem;
+}
+
+.titulo {
+    font-size: var(--tamañoFuente);
+    height: 5rem;
+}
+
+.titulo span {
+    font-size: 2rem;
+}
+
+.subtitulo {
+    text-align: center;
+    font-size: 3.8rem;
+    color: var(--blanco);
+    padding-bottom: 10rem;
+    padding-top: 15rem;
+}
+
+.place {
+    font-weight: 600;
+    color: var(--negro);
+}
+
+.boton {
+    background-color: var(--rojoClaro);
+    padding: 1rem 3rem;
+    text-decoration: none;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    border-radius: 0.5rem;
+    width: 80%;
+    text-align: center;
+    border: none;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto 0 auto;
+}
+
+.nav-bg {
+    background-color: var(--rojo);
+    position: relative;
+    z-index: 10;
+}
+
+.navegacion-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 480px) {
+    .navegacion-principal {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .boton {
+        width: auto;
+    }
+}
+
+.boton:hover {
+    cursor: pointer;
+}
+
+.navegacion-principal a {
+    padding: 1rem;
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.navegacion-principal a:hover {
+    background-color: var(--rojoFuerte);
+    color: var(--blanco);
+}
+
+.hero {
+    background-color: var(--rojoFuerte);
+    background-image: url(imagen/images.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 50rem;
+    position: relative;
+    margin-bottom: 4rem;
+    overflow: hidden;
+}
+
+.contenido-hero {
+    position: absolute;
+    background-color: rgb(0 0 0 / 40%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 4rem;
+}
+
+.servicios {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 3rem;
+}
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicio p {
+    line-height: 2;
+    text-align: center;
+}
+
+.servicio .icono {
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--gris);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario {
+    background-color: var(--gris);
+    width: min(60rem, 100%);
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.formulario fieldset {
+    border: none;
+}
+
+.formulario legend {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.campo {
+    margin-bottom: 1rem;
+}
+
+.campo label {
+    color: var(--grisOscuro);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.campo textarea {
+    height: 20rem;
+}
+
+.input-text {
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+.enviar .boton {
+    width: 100%;
+    color: var(--blanco);
+}
+
+footer {
+    padding: 2rem;
+    text-align: center;
+}
+
+footer p {
+    text-align: center;
+}
